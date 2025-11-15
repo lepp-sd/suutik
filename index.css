@@ -56,7 +56,7 @@ section {
 }
 
 .ketcol {
-    grid-area: 2col;
+    grid-area: ketcol;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
