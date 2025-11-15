@@ -1,7 +1,7 @@
 @font-face {
-        font-family: sajatfont;
-        src: url("/sutik/font/Schoolbell-Regular.ttf");
-    }
+    font-family: sajatfont;
+    src: url("/sutik/font/Schoolbell-Regular.ttf");
+}
 
 * {
     margin: 0, auto;
@@ -44,11 +44,11 @@ main {
 }
 
 section {
-   display: grid;
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
         "nav"
-        "2col"
+        "ketcol"
         "tabla"
         "footer";
     padding: 32px;
@@ -60,15 +60,15 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-    "article kep";
-}
+        "article kep";
+    text-align: left;}
 
 .kep {
     /* display: grid; */
     grid-area: kep;
     width: 100%;
     height: 550px;
-    object-fit:cover;
+    object-fit: cover;
 
 }
 
@@ -81,35 +81,35 @@ section {
 }
 
 .nav {
-   grid-area: nav;
+    grid-area: nav;
 }
 
 li {
     grid-area: nav;
     display: inline-block;
     list-style: none;
-     color: #8d5b1a;
+    color: #8d5b1a;
     background-color: #feda70;
     font-size: 20px;
     padding: 0.5rem;
     border-radius: 12px;
     border: 3px solid black;
-    
+
 
 }
 
 .articleh1 {
-    font-size: 28px;
-    font-weight: 400;
-}
-
-h2 {
     font-size: 56px;
     font-weight: 400;
 }
 
+h2 {
+    font-size: 36px;
+    font-weight: 400;
+}
+
 p {
-    font-size: 24px;
+    font-size: 20px;
     max-width: 60ch;
     font-weight: 400;
 }
@@ -119,25 +119,41 @@ table {
     max-width: 1080px;
     grid-column-start: 1;
     grid-column-end: 2;
-    
-}
-table, tbody, thead, tr, td, th {
-border: 1px solid black;
-border-collapse: collapse;
 
-}    
+}
+
+table,
+tbody,
+thead,
+tr,
+td,
+th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: left;
+
+}
 
 
 tr:nth-child(odd) {
     background-color: #8d5b1a;
-    
+    color: #feda70;
+    font-size: 14px;
+
 }
 
 tr:nth-child(even) {
     background-color: #feda70;
+    color: black;
+    font-size: 14px;
 }
 
 footer {
     grid-area: footer;
-    
+    background-color: #8d5b1a;
+    margin-top: 1rem;
+    border-radius: 4px;
+    color: #feda70;
+    padding: 5px;
 }
