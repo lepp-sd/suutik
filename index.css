@@ -2,4 +2,47 @@
     margin: 0, auto;
     padding: 0;
     box-sizing: border-box;
+    @font-face {
+        font-family: sajatfont;
+        src: url(/font/Schoolbell-Regular.ttf)
+    };
+    
+}
+
+body {
+    background-image:url(/sutik/kepek/background.png);
+    min-height: 100vh;
+    min-width: 100vw;
+    padding-inline: 32px;
+    padding-block: 64px;
+    font-family: sajatfont;
+}
+
+main {
+    max-width: 90vw;
+    min-height: calc(100vh - 128px);
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 3px solid black;
+    disp
+
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid grid-template-areas:
+    "bal jobb";
+
+}
+
+div {
+    display: grid;
+    grid-area: bal;
+}
+
+article {
+    display: grid;
+    grid-area: jobb;
 }
