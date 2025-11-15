@@ -1,48 +1,143 @@
+@font-face {
+        font-family: sajatfont;
+        src: url("/sutik/font/Schoolbell-Regular.ttf");
+    }
+
 * {
     margin: 0, auto;
     padding: 0;
     box-sizing: border-box;
-    @font-face {
-        font-family: sajatfont;
-        src: url(/font/Schoolbell-Regular.ttf)
-    };
-    
+    font-family: sajatfont;
+
 }
 
 body {
-    background-image:url(/sutik/kepek/background.png);
+    background-image: url(/sutik/kepek/background.png);
     min-height: 100vh;
     min-width: 100vw;
     padding-inline: 32px;
     padding-block: 64px;
-    font-family: sajatfont;
+    /* font-family: sajatfont; */
+    /* display: grid; */
+    /* grid grid-template-areas: 
+    "nav nav"
+    "article kep"
+    "tabla tabla"; */
 }
 
 main {
+    font-family: sajatfont;
     max-width: 90vw;
     min-height: calc(100vh - 128px);
     text-align: center;
     background-color: #ffffff;
     border-radius: 12px;
     border: 3px solid black;
-    disp
+    padding-inline: 5rem;
+    /* display: grid;
+    grid-template-columns: 1fr fr;
+    grid-template-areas:
+        "nav nav"
+        "article kep"
+        "tabla tabla"; */
 
 }
 
 section {
+   display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "nav"
+        "2col"
+        "tabla"
+        "footer";
+    padding: 32px;
+
+}
+
+.ketcol {
+    grid-area: 2col;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid grid-template-areas:
-    "bal jobb";
+    grid-template-areas:
+    "article kep";
+}
+
+.kep {
+    /* display: grid; */
+    grid-area: kep;
+    width: 100%;
+    height: 550px;
+    object-fit:cover;
 
 }
 
-div {
-    display: grid;
-    grid-area: bal;
+.article {
+    /* display: grid; */
+    grid-area: article;
+    height: fit-content;
+    max-width: 1080px;
+    margin: auto;
 }
 
-article {
-    display: grid;
-    grid-area: jobb;
+.nav {
+   grid-area: nav;
+}
+
+li {
+    grid-area: nav;
+    display: inline-block;
+    list-style: none;
+     color: #8d5b1a;
+    background-color: #feda70;
+    font-size: 20px;
+    padding: 0.5rem;
+    border-radius: 12px;
+    border: 3px solid black;
+    
+
+}
+
+.articleh1 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 56px;
+    font-weight: 400;
+}
+
+p {
+    font-size: 24px;
+    max-width: 60ch;
+    font-weight: 400;
+}
+
+table {
+    grid: tabla;
+    max-width: 1080px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    
+}
+table, tbody, thead, tr, td, th {
+border: 1px solid black;
+border-collapse: collapse;
+
+}    
+
+
+tr:nth-child(odd) {
+    background-color: #8d5b1a;
+    
+}
+
+tr:nth-child(even) {
+    background-color: #feda70;
+}
+
+footer {
+    grid-area: footer;
+    
 }
